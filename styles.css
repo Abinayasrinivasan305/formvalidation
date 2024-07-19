@@ -1,0 +1,123 @@
+.box1{
+    border:2px solid black;
+    width:50%;
+    height:38px;
+    background:#DDDFE2;
+    position:absolute;
+    left:390px;
+    text-align:center;
+    font-family:verdana;
+    font-weight:bold;
+    font-size:30px;
+}
+.centerdiv{
+   left:450px;
+   position:absolute;
+}
+.textbox1{
+   top:70px;
+   position:absolute;
+   font-size:20px;
+   font-family:verdana;
+   font-weight:bold;
+   color:black;
+}
+.input1{
+   width:250px;
+   height:35px;
+   left:400px;
+   position:absolute;
+   border-radius:3px;
+   background:#A5DFF8;
+}
+.input2{
+   width:250px;
+   height:35px; 
+   left:400px;
+   position:absolute;
+   background:#A5DFF8;
+}
+.input3{
+   width:700px;
+   height:50px;
+   left:15px;
+   position:absolute;
+   border-radius:12px;
+  border:2px solid #A5DFF8;
+   font-size:12px;
+   font-weight:medium;
+   font-family:verdana;
+   padding:5px 5px 3px 5px;
+   text-align:right;
+}
+.input4{
+   width:150px;
+   height:40px;
+   left:200px;
+   position:absolute;
+   border-radius:12px;
+   border:2px solid gray;
+   font-size:30px;
+   font-weight:bold;
+   background-color:white;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+#body{
+
+   background-image: url('back4.jpg');
+
+   width:1200px;
+   height: 1250;
+   background-repeat: no-repeat;
+   background-size:cover ;
+   background-attachment: fixed;
+   background-position: center;
+}
+.bg{
+
+    background-image: url('back4.jpg');
+    width:1200px;
+    height: 1250;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-attachment: fixed;
+    background-position: center;
+   }
+.box{
+     
+      border-radius:20px;
+      margin:5px;
+      height:70%;
+      width:25%;
+      padding:center;
+      top:120px;
+      right:470px;
+      position:absolute;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(4.3px);
+      -webkit-backdrop-filter: blur(4.3px);
+       border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.h1{
+      text-align:center;
+      position:relative;
+      top:140px;
+      color:green;
+}
+.p5{
+      text-align:center;
+      position:relative;
+      top:200px;
+}
+.img3 {
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       position:relative;
+       top:75px;
+       color:darkgrey;
+}

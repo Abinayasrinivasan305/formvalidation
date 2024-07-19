@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+<script>
+
+    function validateForm() {
+
+      let x = document.forms["myForm"]["fullname"].value;
+      if (x == "") {
+        alert("Name must be filled out ");
+        return false;
+      }
+     if(x.match(/[^a-z]/gi))
+    {
+    alert("enter only alphabets");
+    return false;
+
+    }
+    let y = document.forms["myForm"]["address"].value;
+    if(y == "")
+    {
+    alert("enter address");
+    return false;
+    }
+    let z = document.forms["myForm"]["email"].value;
+    if(z == "")
+    {
+      alert("enter email");
+      return false;
+    }
+    let pat=/([a-zA-Z0-9])+\@+([a-zA-Z])+\.+([a-z])/;
+    if(!pat.test(z))
+    {
+      alert("enter correct email format");
+      return false;
+    }
+
+    let phone=document.forms["myForm"]["phno"].value;
+    let phlen=phone.length;
+    if(phone==""){
+       alert("enter the phone number");
+       return false;
+
+    }
+
+    if(phone.match(/[^0-9]/)){
+       alert("enter only numbers");
+       return false;
+    }
+    if(phlen!=10){
+       alert("enter 10 numbers");
+       return false;
+    }
+    let age=document.forms["myForm"]["age"].value;
+    let agelen=age.length;
+    if(age==""){
+      alert("enter the age");
+       return false;
+
+    }
+    if(age <12 || agelen>3){
+      alert("not a valid age");
+      return false;
+    }
+    let ele=document.getElementsByName("gen");
+    let storevalue,res;
+    for(i=0;i<2;i++){
+      if(!ele[0].checked && !ele[1].checked){
+        alert("select the gender");
+        return false;
+      }
+    }
+
+    for(var i=0;i<ele.length;i++){
+      if(ele[i].checked){
+        storevalue=ele[i].value;
+
+
+      }
+    }
+    let sel=document.forms["myForm"]["select"];
+    let opt=sel.options[sel.selectedIndex].value;
+
+    if(opt=="SELECT"){
+      alert("select the course");
+      return false;
+    }
+
+   let check=document.forms["myForm"]["checkbox"];
+   if(!check.checked){
+    alert("please accept the terms and conditions");
+   }
+   else{
+    alert("Thank you for accepting the terms and conditions");
+   }
+
+  alert(`YOUR NAME:${x}\nYOUR ADDRESS:${y}\n YOUR EMAIL:${z}\n YOUR MOBLILE NUMBER:${phone}\n YOUR AGE:${age}\nYOUR GENDER:${storevalue}\nYOUR COURSE:${opt}`) ;
+
+
+  }
+
+
+</script>
+</head>
+<body id="body">
+    <div ></div>
+
+
+    <div class="box1">Login Form 2023</div>
+    <div class="centerdiv">
+    <form class="textbox1" name="myForm" method="GET" action="success.html">
+     Name:-<input class="input1" type="text" name="fullname" id="fullname" autocomplete="off"><br><br>
+    Address:-<textarea class="input2" name="address"></textarea><br><br>
+    Email:-<input class="input1" type="text" name="email" id="mail" autocomplete="off"><br><br>
+    Mobile No:-<input class="input1" type="text" name="phno" autocomplete="off"><br><br>
+    Age:-<input class="input1" type="text" name="age" autocomplete="off"><br><br>
+
+    Gender:- <label style="position:relative;left:420px;bottom:20px;">Male</label><input value="male" type="radio" name="gen" style="position:relative;left:340px;bottom:20px;" ><label style="position:relative;left:550px;bottom:45px;">Female</label><input value="female" type="radio" name="gen" style="position:relative;left:440px;bottom:45px;"><br><br>
+    Course:-
+    <select class="input1" name="select">
+    <option selected>SELECT</option>
+    <option>CS</option>
+    <option>AIDS</option>
+    <option>IT</option>
+    <option>ECE</option>
+    </select><br><br><br><br>
+
+    <div class="input3" ><input style="left:20px;position:absolute;" type="checkbox" name="checkbox">I declare that
+     I have read and filled the above information,so if the information given by me is incorrect,you have the right to cancel
+    without informing me.<br><br></div><br><br><br><br>
+
+    <button class="input4" onclick=" return validateForm()">Submit</button>
+    </div>
+    </form>
+    </div>
+
+</body>
+</html>
